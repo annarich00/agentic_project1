@@ -1,4 +1,7 @@
-about.html (clean and valid)
+about.html (full updated content)
+- This page uses the same gradient, centers text, and references the photo at
+  assets/images/wedding-charlie.jpg. It includes the modal markup and loads the modal
+  script.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,20 +26,23 @@ about.html (clean and valid)
 ```
   <section aria-labelledby="who-title">
     <h2 id="who-title">Who I Am</h2>
-    <p>Hi, I’m annrich00. I’m passionate about building accessible, maintainable web
-experiences. I enjoy turning ideas into interactive prototypes and polished
-interfaces.</p>
+    <p>I'm a Space Force fellow and a 2022 graduate of the University of San Diego. I then
+worked on rockets at Vandenberg Space Force Base until coming to Boston to start at MIT a
+couple weeks ago.</p>
   </section>
 
-  <section aria-labelledby="outline-title">
-    <h2 id="outline-title">Project Outline</h2>
-    <ul>
-      <li>Purpose: A personal portfolio to showcase projects and skills.</li>
-      <li>Navigation: Multi-page structure (Home, About, Portfolio).</li>
-      <li>Animation: Subtle motion to keep things engaging without distraction.</li>
-      <li>Easter egg: A fun hidden feature triggered by a keyboard sequence.</li>
-    </ul>
+  <section aria-labelledby="personal-title">
+    <h2 id="personal-title">Personal Life</h2>
+    <p>I grew up as a military kid, moving all around the world—but I claim California as
+home since I’ve lived there the longest. I married my husband in April of this year and we
+love to surf, hike, ski/snowboard, and be part of faith-based community while serving
+others.</p>
+    <p>Meet my husband: <a href="#" class="husband-name"
+data-photo="assets/images/wedding-charlie.jpg" aria-label="Wedding photo of Anna and
+Charlie">Charlie Richards</a>.</p>
   </section>
+
+  <!-- You can add more personal subsections here if you’d like -->
 
 ```
 
@@ -46,6 +52,14 @@ interfaces.</p>
     <p>Want to see more? Check the Portfolio page for sample projects.</p>
   </footer>
 
+<div class="modal" id="wedding-modal" role="dialog" aria-label="Wedding photo">
+    <div class="modal-content">
+      <button class="close" aria-label="Close modal">&times;</button>
+      <img id="modal-img" src="" alt="Wedding photo of Anna and Charlie" />
+    </div>
+  </div>
+
 <script src="assets/js/script.js"></script>
+<script src="assets/js/modal.js"></script>
 </body>
 </html>
