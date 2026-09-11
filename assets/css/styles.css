@@ -72,3 +72,26 @@
    .content { padding: 1.5rem; }
    .site-nav { padding: .5rem; }
  }
+
+ /* Ensure the content container centers text (and keeps the content visually readable):*/ 
+ .content {
+ max-width: 900px;
+ padding: 2rem;
+ margin: 0 auto;
+ text-align: center;
+ background: rgba(0, 0, 0, 0.25); /* optional: keeps text readable over gradient */
+ border-radius: 8px;
+ }
+
+/* Do NOT set body { text-align: center; } to avoid centering the navigation. If you
+ already did, remove that line or override for nav: */
+ .site-nav {
+ display: flex;
+ gap: 1rem;
+ padding: 1rem;
+ position: sticky;
+ top: 0;
+ background: rgba(0, 0, 0, 0.25);
+ backdrop-filter: blur(4px);
+ justify-content: flex-start; /* keep nav left-aligned */
+ }
