@@ -1,40 +1,42 @@
- <!DOCTYPE html>
+ agentic-ai-course-site/index.html
+    <!DOCTYPE html>
  <html lang="en">
  <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <title>Agentic AI Course Project</title>
+   <link
+ href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+ rel="stylesheet">
    <link rel="stylesheet" href="assets/styles.css" />
  </head>
  <body>
-   <header class="site-header">
-     <nav class="container nav" aria-label="Main navigation">
-       <a class="brand" href="index.html">Agentic AI Project</a>
-       <ul class="nav-links">
-         <li><a href="index.html" class="active">Project</a></li>
+   <header class="topbar" role="banner">
+     <nav class="container" aria-label="Main navigation">
+       <a class="brand" href="index.html">Your Name</a>
+       <ul class="tabs" role="navigation" aria-label="Primary">
+         <li><a class="active" href="index.html">Home</a></li>
          <li><a href="about.html">Me</a></li>
        </ul>
      </nav>
    </header>
 
-   <main class="container">
-     <section class="hero">
-       <h1>Agentic AI Course Project</h1>
-       <p>Welcome! This is a lightweight website to showcase my project for the Agentic AI
- course and share a little about me. It's hosted on GitHub Pages for public viewing by my
- class.</p>
-       <a href="about.html" class="btn">Learn more about me</a>
-     </section>
-
-     <section class="content" aria-labelledby="project-overview">
-       <h2 id="project-overview">Project overview</h2>
-       <p>Describe your project here: goals, methodology, key features, outcomes, and what
- you learned. Replace this text with your actual project details.</p>
-       <p>Tip: replace this text with your actual project details.</p>
-     </section>
+ <main class="container hero" aria-label="Intro">
+     <h1 class="name">Your Name</h1>
+     <p class="subtitle">Student in the Agentic AI course</p>
    </main>
 
-   <footer class="site-footer container">
+ <div class="rocket" aria-hidden="true">
+     <svg width="90" height="36" viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg"
+ fill="none">
+       <path d="M5 10 L12 2 L14 4 L7 11 L5 10 Z" fill="#f472b6"/>
+       <path d="M12 4 L17 1 L21 4 L12 4 Z" fill="#fb7185"/>
+       <polygon points="19,9 28,6 19,11" fill="#fff" opacity="0.8"/>
+       <path d="M28 6 L60 0 L60 20 L28 6 Z" fill="#fff" opacity="0.25"/>
+     </svg>
+   </div>
+
+ <footer class="site-footer container" style="margin-top:2rem;">
      <p>© Your Name — Agentic AI Course</p>
    </footer>
  </body>
