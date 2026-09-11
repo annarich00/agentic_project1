@@ -6,9 +6,10 @@ agentic-ai-course-site/assets/styles.css
  :root{
    --bg: #f5f7fb;
    --surface: #ffffff;
-   --text: #111827;
+   --text: #0f1220;
    --muted: #6b7280;
    --brand: #2563eb;
+   --topbar: #0b1020;
  }
 
  - { box-sizing: border-box; }
@@ -20,7 +21,7 @@ agentic-ai-course-site/assets/styles.css
    color: var(--text);
    text-align: center;
    background: var(--bg);
-   padding-top: 74px; /* space for fixed top bar */
+   padding-top: 72px; /* space for fixed top bar */
  }
 
  .topbar {
@@ -28,31 +29,38 @@ agentic-ai-course-site/assets/styles.css
    top: 0;
    left: 0;
    width: 100%;
-   background: #111827;
+   height: 72px;
+   background: var(--topbar);
    color: #fff;
    z-index: 50;
    border-bottom: 1px solid rgba(255,255,255,.15);
+   display: flex;
+   align-items: center;
  }
 
  .topbar .container {
+   width: 100%;
+   max-width: 1100px;
+   margin: 0 auto;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0.6rem 1rem;
+   padding: 0 1rem;
  }
 
  .brand {
    font-weight: 700;
    color: #fff;
    text-decoration: none;
+   font-size: 1.125rem;
  }
 
  .tabs { list-style: none; display: inline-flex; gap: 0.75rem; padding: 0; margin: 0; }
- .tabs a { color: #e5e7eb; text-decoration: none; padding: .4rem .8rem; border-radius: 6px;
- }
+ .tabs a { color: #e5e7eb; text-decoration: none; padding: .5rem .9rem; border-radius: 6px;
+ font-weight: 500; }
  .tabs a.active, .tabs a:hover { background: rgba(255,255,255,.15); }
 
- .container { max-width: 900px; margin: 0 auto; padding: 1rem; }
+ .container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
 
  .hero {
    padding: 4rem 1rem;
@@ -64,29 +72,30 @@ agentic-ai-course-site/assets/styles.css
    position: relative;
  }
 
- .hero .name {
-   font-size: 3rem;
+ .name {
+   font-size: clamp(2.4rem, 6vw, 4.8rem);
    margin: 0;
    font-weight: 700;
  }
 
- .hero .subtitle {
-   margin-top: .5rem;
-   font-size: 1.15rem;
-   color: var(--muted);
+ .subtitle {
+   margin-top: .75rem;
+   font-size: 1.2rem;
+   color: #374151;
+   opacity: 0.95;
  }
 
  .rocket {
    position: fixed;
-   top: 40vh;
-   left: -120px;
-   width: 90px;
-   height: 40px;
+   top: 32vh;
+   left: -140px;
+   width: 120px;
+   height: 60px;
    z-index: 0;
    opacity: 0.95;
+   pointer-events: none;
    transform: translateZ(0);
    animation: fly 12s linear infinite;
-   pointer-events: none;
  }
 
  @keyframes fly {
@@ -94,10 +103,54 @@ agentic-ai-course-site/assets/styles.css
    100% { transform: translateX(110vw); }
  }
 
+ .image-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 1rem;
+   align-items: center;
+   justify-items: center;
+   margin-top: 1.5rem;
+ }
+ .image-grid img {
+   width: 100%;
+   height: auto;
+   border-radius: 12px;
+   box-shadow: 0 6px 14px rgba(0,0,0,.08);
+   object-fit: cover;
+ }
+
+ /* Section titles and general styling */
+ .section-title {
+   font-weight: 700;
+   font-size: 1.75rem;
+   margin: 1.25rem 0 0.5rem;
+ }
+
+ .lead {
+   font-size: 1.15rem;
+   color: #374151;
+   margin: 0 0 1rem;
+ }
+
+ .bullet-list {
+   text-align: left;
+   display: inline-block;
+   margin: 0.75rem 0 1.25rem;
+   padding-left: 1.25rem;
+ }
+ .bullet-list li {
+   margin: 0.25rem 0;
+ }
+
  .site-footer {
    padding: 1rem;
-   font-size: 0.9rem;
+   font-size: 0.95rem;
    color: var(--muted);
    border-top: 1px solid #e5e7eb;
    background: #fff;
  }
+ @media (max-width: 600px) {
+   .rocket { display: none; } /* hide rocket on very small screens for clarity */
+   .name { font-size: 2.6rem; }
+ }
+ </style>
